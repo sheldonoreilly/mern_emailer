@@ -11,7 +11,7 @@ const Landing = () => {
 					User Speak...
 				</Typography>
 				<Paper elevation={8}>
-					<img src="/images/landing_670.jpg" alt="" srcset="" />
+					<img src="/images/landing_670.jpg" alt="" />
 				</Paper>
 			</Grid>
 		</div>
