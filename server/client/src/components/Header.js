@@ -6,8 +6,9 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
 import HomeIcon from "@material-ui/icons/Home";
+import { Link } from "react-router-dom";
+import Landing from "./Landing";
 
 import { connect } from "react-redux";
 
@@ -51,7 +52,7 @@ class Header extends Component {
 			<div className={classes.root}>
 				<AppBar position="static">
 					<Toolbar>
-						<IconButton color="inherit">
+						<IconButton color="inherit" component={Link} to={this.props.auth ? "/surveys" : "/"}>
 							<HomeIcon />
 						</IconButton>
 						<Typography variant="title" color="inherit" className={classes.grow}>
