@@ -55,8 +55,8 @@ class Header extends Component {
 						<IconButton color="inherit" component={Link} to={this.props.auth ? "/surveys" : "/"}>
 							<HomeIcon />
 						</IconButton>
-						<Typography variant="title" color="inherit" className={classes.grow}>
-							An Engine Room App
+						<Typography variant="button" color="inherit" className={classes.grow}>
+							[DISPATCH]
 						</Typography>
 						{renderContent(auth, classes)}
 					</Toolbar>
