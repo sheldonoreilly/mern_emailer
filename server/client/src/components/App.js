@@ -4,11 +4,11 @@ import { connect } from "react-redux";
 import * as actions from "../actions";
 
 import Header from "./Header";
+import Landing from "./Landing";
 
 // const Header = () => <h3>Header</h3>;
 const Dashboard = () => <h3>Dashboard</h3>;
 const SurveyNew = () => <h3>SurveyNew</h3>;
-const Landing = () => <h3>Landing</h3>;
 
 //app is responsible for React comp level stuff
 class App extends Component {

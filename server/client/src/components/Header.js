@@ -7,6 +7,7 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
+import HomeIcon from "@material-ui/icons/Home";
 
 import { connect } from "react-redux";
 
@@ -50,11 +51,11 @@ class Header extends Component {
 			<div className={classes.root}>
 				<AppBar position="static">
 					<Toolbar>
-						<IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
-							<MenuIcon />
+						<IconButton color="inherit">
+							<HomeIcon />
 						</IconButton>
 						<Typography variant="title" color="inherit" className={classes.grow}>
-							Campaigner
+							An Engine Room App
 						</Typography>
 						{renderContent(auth, classes)}
 					</Toolbar>
