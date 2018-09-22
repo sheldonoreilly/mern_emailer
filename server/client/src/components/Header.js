@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 // import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -8,7 +8,8 @@ import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import HomeIcon from "@material-ui/icons/Home";
 import { Link } from "react-router-dom";
-import Landing from "./Landing";
+// import Landing from "./Landing";
+import Payments from "./Payments";
 
 import { connect } from "react-redux";
 
@@ -38,9 +39,14 @@ function renderContent(auth, classes) {
 			);
 		default:
 			return (
-				<Button href="/api/logout" color="inherit">
-					Logout
-				</Button>
+				<Fragment>
+					<div color="inherit">
+						<Payments />
+					</div>
+					<Button href="/api/logout" color="inherit">
+						Logout
+					</Button>
+				</Fragment>
 			);
 	}
 }
