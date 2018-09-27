@@ -22,7 +22,7 @@ class Payments extends Component {
 					name={"Emailer"}
 					description={"$5 for 5 survey credits"}
 					amount={500}
-					token={token => props.handleToken(token)} 
+					token={token => this.props.handleToken(token)} 
 					stripeKey={process.env.REACT_APP_STRIPE_KEY}
 				>
 					<Button variant="fab" mini color="secondary">
