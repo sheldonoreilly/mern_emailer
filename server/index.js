@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const keys = require("./config/keys");
 const cookieSession = require("cookie-session");
 const passport = require("passport");
+const bodyParser = require('body-parser');
 require("./models/user");
 require("./services/passport");
 
@@ -11,11 +12,9 @@ mongoose.connect(keys.mongoURI).then(mes => {
 	console.log("DB Connection Succesful");
 });
 
-//import auth routes
-const authRouters = require("./routes/authRoutes");
-
 //create our app
 const app = express();
+app.use(bodyParser.json())
 
 //middleware - sessions.  Expire 30 days
 app.use(
