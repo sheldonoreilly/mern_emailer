@@ -6,6 +6,7 @@ const passport = require("passport");
 require("./models/user");
 require("./services/passport");
 
+
 mongoose.connect(keys.mongoURI).then(mes => {
 	console.log("DB Connection Succesful");
 });
@@ -33,6 +34,7 @@ app.use(passport.session());
  * The returned function then takes app 'in' as a argument
  */
 require("./routes/authRoutes")(app);
+require("./routes/billingRoutes")(app);
 
 //dynamic port binding
 const PORT = process.env.PORT || 5000;
