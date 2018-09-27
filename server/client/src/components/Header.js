@@ -27,7 +27,6 @@ const styles = {
 };
 
 function renderContent(auth, classes) {
-	console.log("auth :", auth);
 	switch (auth) {
 		case null:
 			return <Button color="inherit">Waiting</Button>;
